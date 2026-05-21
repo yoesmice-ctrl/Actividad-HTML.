@@ -1,86 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BucaraEmprende</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Misión Secreta de Pinky y Cerebro.</title>
+
+    <style>
+        body{
+            background-color: white;
+            color: white;
+            font-family: Arial;
+            text-align: left;
+        }
+
+        h1{
+            color: black;
+        }
+
+/* TEXTO AZUL */
+.texto-azul{
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* ENLACES */
+        a{
+            display: block;
+            margin: 10px 0;
+            color: cyan;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: yellow;
+        }
+
+        /* BOTONES */
+        button{
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* BOTÓN VERDE */
+        .verde{
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        /* BOTÓN ROJO */
+        .rojo{
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+        /* BOTÓN TRANSPARENTE */
+        .transparente{
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+    </style>
 </head>
+
 <body>
 
-    <div class="container container-prin">
-        <form class="form-prin">
-            <button type="button" class="prin-button" id="btnNuevoEvento">NUEVO EVENTO</button>
-            <button type="button" class="prin-button" id="btnNuevoEmprendimiento">NUEVO EMPRENDIMIENTO</button>
-            <button type="button" class="prin-button" id="btnVerEventos">VER EVENTOS</button>
-        </form>
-    </div>
+    <h1> Pinky y Cerebro. </h1>
+    <p class="texto-azul">
+        Cada noche, Pinky y Cerebro trabajan en un nuevo plan secreto para conquistar el mundo desde su laboratorio oculto. 
+        Cerebro, siendo el más inteligente del dúo, diseña estrategias complejas utilizando inventos futuristas, computadoras avanzadas 
+        y experimentos científicos increíbles. Mientras tanto, Pinky intenta ayudar, aunque muchas veces termina causando situaciones 
+        divertidas y desastrosas sin querer. A pesar de todos los problemas, ambos continúan intentando cumplir su misión secreta, 
+        enfrentando desafíos, peligros y aventuras inesperadas. Su amistad, humor y creatividad hacen que cada episodio sea una historia 
+        llena de diversión, ciencia ficción y locuras inolvidables.
+        </p>
+    </p>
 
-    <div id="mensajes" class="alert-container"></div> <div class="container" id="contenedorNuevoEvento">
-        <div class="heading">NUEVO EVENTO</div>
-        <form class="form" id="formularioEvento">
-            <input class="input" type="text" placeholder="NOMBRE DEL LUGAR" id="nombreEvento" required>
-            <br>
-            <br>
-            <br>
-            <label class="input">FECHA DE INICIO</label>
-            <br>
-            <input class="input" type="date" id="fechaInicioEvento" required>
-            <br>
-            <br>
-            <br>
-            <label class="input">FECHA DE FINALIZACIÓN</label>
-            <br>
-            <input class="input" type="date" id="fechaFinEvento" required>
-            <br>
-            <br>
-            <br>
-            <label class="input">HORA DE INICIO</label>
-            <input class="input" type="time" id="horaInicioEvento" required>
-            <br>
-            <br>
-            <br>
-            <label class="input">HORA DE FINALIZACIÓN</label>
-            <input class="input" type="time" id="horaFinEvento">
-            <button type="submit" class="login-button">GUARDAR EVENTO</button>
-        </form>
-    </div>
+    <h2>Redes Sociales</h2>
+    <a href="https://www.facebook.com" target="_blank" 
+style="color: darkblue; text-decoration: underline;">
 
-    <div class="container hidden" id="contenedorNuevoEmprendimiento">
-        <div class="heading">NUEVO EMPRENDIMIENTO</div>
-        <form class="form" id="formularioEmprendimiento">
-            <select class="input" name="seleccionEvento" id="seleccionEvento" required>
-                <option value="">SELECCIONE UN EVENTO</option>
-                </select>
-            <input class="input" type="text" placeholder="NOMBRE DEL EMPRENDIMIENTO" id="nombreEmprendimiento" required>
-            <select class="input" name="categoria" id="categoriaEmprendimiento" required>
-                <option value="">CATEGORIA</option>
-                <option value="COMIDA">COMIDA</option>
-                <option value="JUEGOS">JUEGOS</option>
-                <option value="ENTRETENIMIENTO">ENTRETENIMIENTO</option>
-                <option value="ROPA">ROPA</option>
-                <option value="TECNOLOGIA">TECNOLOGÍA</option>
-                <option value="SERVICIOS">SERVICIOS</option>
-            </select>
-            <input class="input" type="text" placeholder="DESCRIPCIÓN" id="descripcionEmprendimiento">
-            <input class="input" type="url" placeholder="ENLACE A RED SOCIAL" id="enlaceRedSocialEmprendimiento">
-            <br>
-            <br>
-            <div class="heading">PRODUCTO O SERVICIO</div>
-            <input class="input" type="text" placeholder="NOMBRE DEL PRODUCTO/SERVICIO" id="nombreProducto">
-            <input type="number" class="input" placeholder="PRECIO" id="precioProducto" step="0.01">
-            <input class="input" type="text" placeholder="DESCRIPCIÓN DEL PRODUCTO/SERVICIO" id="descripcionProducto">
-            <input type="file" class="input" id="imagenProducto" accept="image/*">
-            <button type="submit" class="login-button">GUARDAR EMPRENDIMIENTO</button>
-        </form>
-    </div>
+<div style="display: flex; gap: 40px;">
 
-    <div class="container hidden" id="contenedorListaEventos">
-        <div class="heading">EVENTOS REGISTRADOS</div>
-        <div id="listaEventos">
-            </div>
-    </div>
+    <a href="https://www.facebook.com" target="_blank"
+    style="color: darkblue; text-decoration: underline;">
+        Facebook.
+    </a>
 
-    <script src="./script.js"></script>
+    <a href="https://www.instagram.com" target="_blank"
+    style="color: darkblue; text-decoration: underline;">
+        Instagram.
+    </a>
+
+    <a href="https://www.youtube.com" target="_blank"
+    style="color: darkblue; text-decoration: underline;">
+        YouTube.
+    </a>
+
+</div>
+</a>
+
+
+    <h2>Botones</h2>
+
+    <button class="verde">
+        Button Green.
+    </button>
+
+    <button class="rojo">
+        Button Red.
+    </button>
+
+    <button class="white">
+        Button White.
+    </button>
+
 </body>
 </html>
+
+<style>
+
+    body{
+        font-family: monospace;
+    }
+
+</style>
+
+<img src="https://images-ext-1.discordapp.net/external/pGbgUySkfpaQW9F00daP_i0T4CynEh5IJQSy2YfDwnU/https/bb5f4035-6bdd-4f65-a1ce-42506ae24453.mdnplay.dev/shared-assets/images/examples/star2.png?format=webp&quality=lossless&width=17&height=17">
+<img src="https://images-ext-1.discordapp.net/external/pGbgUySkfpaQW9F00daP_i0T4CynEh5IJQSy2YfDwnU/https/bb5f4035-6bdd-4f65-a1ce-42506ae24453.mdnplay.dev/shared-assets/images/examples/star2.png?format=webp&quality=lossless&width=17&height=17"
+width="100">
+<div style="text-align:center;">
+
+    <img 
+    src="https://images-ext-1.discordapp.net/external/pGbgUySkfpaQW9F00daP_i0T4CynEh5IJQSy2YfDwnU/https/bb5f4035-6bdd-4f65-a1ce-42506ae24453.mdnplay.dev/shared-assets/images/examples/star2.png?format=webp&quality=lossless&width=17&height=17"
+    width="100">
+
+</div>
+
+<div style="display: flex; flex-direction: column;">
+
+    <img 
+    src="https://images-ext-1.discordapp.net/external/pGbgUySkfpaQW9F00daP_i0T4CynEh5IJQSy2YfDwnU/https/bb5f4035-6bdd-4f65-a1ce-42506ae24453.mdnplay.dev/shared-assets/images/examples/star2.png?format=webp&quality=lossless&width=17&height=17"
+    width="100">
+
+</div>
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Lista de Compras.</title>
+
+    <style>
+
+        /* FUENTE GENERAL */
+        body{
+        font-family: monospace;
+        padding: 20px;
+        background-color: yellowgreen
+        }
+
+        h1{
+        text-align: center;
+        }
+
+        /* VERDURAS. */
+        .verdura{
+        border-bottom: 3px dashed green;
+        width: 200px;
+        padding: 5px;
+        margin: 10px 0;
+        }
+
+        /* FRUTAS */
+        .fruta{
+        border-bottom: 3px dotted yellow;
+        width: 200px;
+        padding: 5px;
+        margin: 10px 0;
+        }
+
+        /* TABLA */
+        table{
+        border-collapse: collapse;
+        margin-top: 30px;
+        width: 400px;
+        }
+
+        th, td{
+        border: 1px solid black;
+        padding: 20px;
+        text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lista de Compras.</h1>
+
+    <h2>Verduras.</h2>
+
+    <div class="verdura">Tomate.</div> 
+    <div class="verdura">Cebolla.</div>
+    <div class="verdura">Lechuga.</div>
+    <div class="verdura">Zanahoria.</div>
+    <div class="verdura">Pepino.</div>
+
+    <h2>Frutas.</h2>
+
+    <div class="fruta">Manzana.</div>
+    <div class="fruta">Banano.</div>
+    <div class="fruta">Uvas.</div>
+    <div class="fruta">Pera.</div>
+    <div class="fruta">Mango.</div>
+
+    <h2>Tabla de Valores.</h2>
+
+    <table>
+
+        <tr>
+        <th>Producto.</th>
+        <th>Valor.</th>
+        </tr>
+
+        <tr>
+        <td>Frutas.</td>
+        <td>$20.000</td>
+        </tr>
+
+        <tr>
+        <td>Verduras.</td>
+        <td>$15.000</td>
+        </tr>
+
+        <tr>
+        <td>Total.</td>
+        <td>$35.000</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+
+
+
+
+
