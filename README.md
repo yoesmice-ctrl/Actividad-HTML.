@@ -1,2 +1,2 @@
 # Actividad-HTML.
-Trabajo HTML2-
+Trabajo HTML2.
