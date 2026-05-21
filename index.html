@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BucaraEmprende</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="container container-prin">
+        <form class="form-prin">
+            <button type="button" class="prin-button" id="btnNuevoEvento">NUEVO EVENTO</button>
+            <button type="button" class="prin-button" id="btnNuevoEmprendimiento">NUEVO EMPRENDIMIENTO</button>
+            <button type="button" class="prin-button" id="btnVerEventos">VER EVENTOS</button>
+        </form>
+    </div>
+
+    <div id="mensajes" class="alert-container"></div> <div class="container" id="contenedorNuevoEvento">
+        <div class="heading">NUEVO EVENTO</div>
+        <form class="form" id="formularioEvento">
+            <input class="input" type="text" placeholder="NOMBRE DEL LUGAR" id="nombreEvento" required>
+            <br>
+            <br>
+            <br>
+            <label class="input">FECHA DE INICIO</label>
+            <br>
+            <input class="input" type="date" id="fechaInicioEvento" required>
+            <br>
+            <br>
+            <br>
+            <label class="input">FECHA DE FINALIZACIÓN</label>
+            <br>
+            <input class="input" type="date" id="fechaFinEvento" required>
+            <br>
+            <br>
+            <br>
+            <label class="input">HORA DE INICIO</label>
+            <input class="input" type="time" id="horaInicioEvento" required>
+            <br>
+            <br>
+            <br>
+            <label class="input">HORA DE FINALIZACIÓN</label>
+            <input class="input" type="time" id="horaFinEvento">
+            <button type="submit" class="login-button">GUARDAR EVENTO</button>
+        </form>
+    </div>
+
+    <div class="container hidden" id="contenedorNuevoEmprendimiento">
+        <div class="heading">NUEVO EMPRENDIMIENTO</div>
+        <form class="form" id="formularioEmprendimiento">
+            <select class="input" name="seleccionEvento" id="seleccionEvento" required>
+                <option value="">SELECCIONE UN EVENTO</option>
+                </select>
+            <input class="input" type="text" placeholder="NOMBRE DEL EMPRENDIMIENTO" id="nombreEmprendimiento" required>
+            <select class="input" name="categoria" id="categoriaEmprendimiento" required>
+                <option value="">CATEGORIA</option>
+                <option value="COMIDA">COMIDA</option>
+                <option value="JUEGOS">JUEGOS</option>
+                <option value="ENTRETENIMIENTO">ENTRETENIMIENTO</option>
+                <option value="ROPA">ROPA</option>
+                <option value="TECNOLOGIA">TECNOLOGÍA</option>
+                <option value="SERVICIOS">SERVICIOS</option>
+            </select>
+            <input class="input" type="text" placeholder="DESCRIPCIÓN" id="descripcionEmprendimiento">
+            <input class="input" type="url" placeholder="ENLACE A RED SOCIAL" id="enlaceRedSocialEmprendimiento">
+            <br>
+            <br>
+            <div class="heading">PRODUCTO O SERVICIO</div>
+            <input class="input" type="text" placeholder="NOMBRE DEL PRODUCTO/SERVICIO" id="nombreProducto">
+            <input type="number" class="input" placeholder="PRECIO" id="precioProducto" step="0.01">
+            <input class="input" type="text" placeholder="DESCRIPCIÓN DEL PRODUCTO/SERVICIO" id="descripcionProducto">
+            <input type="file" class="input" id="imagenProducto" accept="image/*">
+            <button type="submit" class="login-button">GUARDAR EMPRENDIMIENTO</button>
+        </form>
+    </div>
+
+    <div class="container hidden" id="contenedorListaEventos">
+        <div class="heading">EVENTOS REGISTRADOS</div>
+        <div id="listaEventos">
+            </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
